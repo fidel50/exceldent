@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="es-BO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clínica Dental Exceldent en La Paz, Bolivia. Atención odontológica integral, estética dental, ortodoncia y tratamientos especializados. ¡Agenda tu cita hoy!">
+    <meta name="keywords" content="clínica dental La Paz, dentista La Paz Bolivia, consultorio odontológico, blanqueamiento dental, ortodoncia, endodoncia">
+    <meta name="author" content="Clínica Dental Exceldent">
+    <meta property="og:title" content="Clínica Dental Exceldent | Dentista en La Paz Bolivia">
+    <meta property="og:description" content="Tu sonrisa en las mejores manos. Atención odontológica integral en el centro de La Paz.">
+    <meta property="og:type" content="website">
+    <title>Clínica Dental Exceldent | Dentista en La Paz Bolivia</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #00a8e8;
+            --accent-color: #00d4ff;
+            --text-dark: #2c3e50;
+            --text-light: #666;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-color);
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            opacity: 0.3;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-primary {
+            background: #25d366;
+            color: var(--white);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image-placeholder {
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .hero-image-placeholder img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Sections General */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--bg-light);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .about-content h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .feature-item::before {
+            content: '✓';
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+        }
+
+        .benefits .section-title {
+            color: var(--white);
+        }
+
+        .benefits .section-subtitle {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .benefit-card p {
+            opacity: 0.9;
+        }
+
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            aspect-ratio: 4/3;
+            background: var(--bg-light);
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--bg-light);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--secondary-color);
+            opacity: 0.3;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+
+        .stars {
+            color: #ffc107;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .testimonial-text {
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* Location Section */
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .location-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .info-icon {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .info-content h4 {
+            margin-bottom: 0.25rem;
+            color: var(--text-dark);
+        }
+
+        .info-content p {
+            color: var(--text-light);
+        }
+
+        .map-container {
+            background: var(--bg-light);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            min-height: 400px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+            border: none;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--bg-light);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: #25d366;
+            color: var(--white);
+            padding: 1.25rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        .phone-display {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .hours-box {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .hours-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-submit:hover {
+            background: var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero-container,
+            .about-grid,
+            .location-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+        }
+
+        /* Floating WhatsApp Button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            cursor: pointer;
+            z-index: 999;
+            transition: transform 0.3s;
+            text-decoration: none;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .floating-whatsapp {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">🦷 Exceldent</a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badges">
+                    <span class="badge">⭐ 4.9/5 Rating</span>
+                    <span class="badge">📍 Centro de La Paz</span>
+                    <span class="badge">🏥 Atención Integral</span>
+                </div>
+                <h1>Tu Sonrisa Merece lo Mejor</h1>
+                <p class="subtitle">En Clínica Dental Exceldent combinamos tecnología moderna, atención personalizada y profesionalismo para cuidar tu salud bucal. Atendemos niños, jóvenes y adultos en el corazón de La Paz.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/59170664557" class="btn btn-primary" target="_blank">
+                        📱 Agenda por WhatsApp
+                    </a>
+                    <a href="#contacto" class="btn btn-secondary">
+                        📞 Contáctanos
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-placeholder">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&h=400&fit=crop" alt="Clínica Dental Exceldent - Instalaciones Modernas">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="nosotros">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&h=400&fit=crop" alt="Equipo Profesional Exceldent">
+                </div>
+                <div class="about-content">
+                    <h2>Sobre Nosotros</h2>
+                    <p>En <strong>Clínica Dental Exceldent</strong> nos dedicamos a cuidar tu salud bucal con tratamientos odontológicos integrales y atención personalizada. Nuestro consultorio, ubicado en pleno centro de La Paz (calle Loayza 250), cuenta con profesionales altamente capacitados y equipamiento moderno.</p>
+                    <p>Ofrecemos soluciones efectivas en odontología general, estética y rehabilitación oral. Atendemos a niños, jóvenes y adultos, brindando desde limpiezas dentales y resinas estéticas hasta endodoncias, ortodoncia y prótesis dentales.</p>
+                    <p>Nuestro compromiso es que cada paciente reciba un tratamiento de calidad en un ambiente cómodo, seguro y confiable. Recupera la salud y belleza de tu sonrisa con el respaldo de un equipo que prioriza tu bienestar.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">Profesionales Certificados</div>
+                        <div class="feature-item">Tecnología Moderna</div>
+                        <div class="feature-item">Trato Personalizado</div>
+                        <div class="feature-item">Instalaciones Cómodas</div>
+                        <div class="feature-item">Ubicación Céntrica</div>
+                        <div class="feature-item">Horarios Flexibles</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <p class="section-subtitle">Ofrecemos una amplia gama de tratamientos odontológicos para toda la familia, utilizando las técnicas más avanzadas y materiales de alta calidad.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🦷</div>
+                    <h3>Odontología General</h3>
+                    <p>Consulta odontológica completa, limpieza dental y profilaxis. Mantén tu salud bucal en óptimas condiciones con nuestros chequeos regulares y tratamientos preventivos.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3>Blanqueamiento Dental</h3>
+                    <p>Recupera el brillo natural de tus dientes con nuestros tratamientos de blanqueamiento seguros y efectivos. Resultados visibles desde la primera sesión.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">💎</div>
+                    <h3>Resinas Estéticas</h3>
+                    <p>Restauraciones dentales con resinas del color de tu diente. Solución estética y duradera para reparar caries, fracturas o mejorar la apariencia de tu sonrisa.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Endodoncia</h3>
+                    <p>Tratamiento de conducto con tecnología avanzada para salvar tus dientes naturales. Procedimiento indoloro y efectivo realizado por especialistas.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">😁</div>
+                    <h3>Ortodoncia</h3>
+                    <p>Corrección de la alineación dental y mordida. Ofrecemos diferentes tipos de brackets para niños y adultos. Logra la sonrisa perfecta que siempre deseaste.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">👶</div>
+                    <h3>Odontopediatría</h3>
+                    <p>Atención dental especializada para niños en un ambiente amigable y sin miedo. Prevenimos y tratamos problemas dentales desde temprana edad.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🦷</div>
+                    <h3>Prótesis Dentales</h3>
+                    <p>Rehabilitación oral completa con prótesis fijas y removibles. Recupera la funcionalidad y estética de tu boca con soluciones personalizadas.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🚨</div>
+                    <h3>Urgencias Dentales</h3>
+                    <p>Atención inmediata para dolores, traumatismos o emergencias dentales. Estamos aquí para ayudarte cuando más lo necesitas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">¿Por Qué Elegirnos?</h2>
+            <p class="section-subtitle">En Exceldent nos diferenciamos por nuestro compromiso con la excelencia y el bienestar de nuestros pacientes.</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏆</div>
+                    <h3>Excelente Reputación</h3>
+                    <p>4.9/5 estrellas con más de 32 reseñas positivas de pacientes satisfechos que confían en nosotros.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">👨‍⚕️</div>
+                    <h3>Profesionales Expertos</h3>
+                    <p>Equipo odontológico altamente calificado con años de experiencia y formación continua.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏥</div>
+                    <h3>Instalaciones Modernas</h3>
+                    <p>Equipamiento de última generación en un ambiente limpio, cómodo y seguro.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">💙</div>
+                    <h3>Trato Personalizado</h3>
+                    <p>Atención cercana y amable. Escuchamos tus necesidades y creamos planes de tratamiento a tu medida.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">📍</div>
+                    <h3>Ubicación Céntrica</h3>
+                    <p>Fácil acceso en el corazón de La Paz, calle Loayza 250, con horarios accesibles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="container">
+            <h2 class="section-title">Nuestras Instalaciones</h2>
+            <p class="section-subtitle">Conoce el espacio donde cuidamos de tu salud bucal con los más altos estándares de calidad.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=300&fit=crop" alt="Consultorio Dental Moderno">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=400&h=300&fit=crop" alt="Equipo Odontológico">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=300&fit=crop" alt="Sala de Espera">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=400&h=300&fit=crop" alt="Tratamiento Dental">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonios">
+        <div class="container">
+            <h2 class="section-title">Lo Que Dicen Nuestros Pacientes</h2>
+            <p class="section-subtitle">La satisfacción de nuestros pacientes es nuestro mayor orgullo. Estas son algunas de sus experiencias.</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Excelente atención profesional. El doctor muy amable y paciente, me explicó todo el procedimiento. Las instalaciones son muy limpias y modernas. Totalmente recomendado."</p>
+                    <p class="testimonial-author">- María G.</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Llevé a mi hijo y lo trataron de maravilla. Tenía mucho miedo al dentista pero lo hicieron sentir cómodo. El resultado del tratamiento quedó perfecto. Volveremos sin duda."</p>
+                    <p class="testimonial-author">- Carlos R.</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Me hice un blanqueamiento dental y quedé encantada con el resultado. Muy puntuales, el trato es cordial y los precios son justos. La mejor clínica dental de La Paz."</p>
+                    <p class="testimonial-author">- Ana L.</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Tuve una urgencia dental y me atendieron de inmediato. Muy profesionales y el dolor desapareció rápidamente. Agradezco su rápida respuesta y excelente trabajo."</p>
+                    <p class="testimonial-author">- Jorge M.</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Llevo años viniendo a Exceldent y siempre recibo un trato excepcional. La ubicación en el centro es muy conveniente y los horarios me facilitan mucho. 100% confiable."</p>
+                    <p class="testimonial-author">- Patricia S.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location" id="ubicacion">
+        <div class="container">
+            <h2 class="section-title">Ubicación</h2>
+            <p class="section-subtitle">Visítanos en nuestra clínica ubicada en el centro de La Paz. Fácil acceso y estacionamiento cercano.</p>
+            
+            <div class="location-grid">
+                <div class="location-info">
+                    <h3>Información de Contacto</h3>
+                    
+                    <div class="info-item">
+                        <span class="info-icon">📍</span>
+                        <div class="info-content">
+                            <h4>Dirección</h4>
+                            <p>Calle Loayza 250<br>Centro de La Paz, Bolivia</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-icon">📞</span>
+                        <div class="info-content">
+                            <h4>Teléfono / WhatsApp</h4>
+                            <p>+591 70664557</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-icon">🕐</span>
+                        <div class="info-content">
+                            <h4>Horario de Atención</h4>
+                            <p>Lunes a Viernes: 10:00 - 19:00<br>Sábados: 09:30 - 12:30<br>Domingos: Cerrado</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-icon">🚗</span>
+                        <div class="info-content">
+                            <h4>Zonas que Atendemos</h4>
+                            <p>Centro de La Paz, Sopocachi, San Jorge, Miraflores, Zona Sur y toda el área metropolitana.</p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 2rem;">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Loayza+250%2C+La+Paz%2C+Bolivia" target="_blank" class="btn btn-primary" style="display: inline-flex;">
+                            🗺️ Ver en Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3815.1234567890123!2d-68.1192936856789!3d-16.4955123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f1234567890ab%3A0x1234567890abcdef!2sLoayza%20250%2C%20La%20Paz%2C%20Bolivia!5e0!3m2!1ses!2s!4v1234567890123!5m2!1ses!2s" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <h2 class="section-title">Contáctanos</h2>
+            <p class="section-subtitle">Estamos listos para atenderte. Escríbenos por WhatsApp o completa el formulario y te responderemos a la brevedad.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>¿Listo para mejorar tu sonrisa?</h3>
+                    <p style="margin-bottom: 2rem; color: var(--text-light);">Agenda tu cita hoy mismo y da el primer paso hacia una salud bucal óptima. Atención personalizada y tratamientos de calidad te esperan.</p>
+                    
+                    <a href="https://wa.me/59170664557" class="whatsapp-button" target="_blank">
+                        <span>💬</span>
+                        <span>Escríbenos por WhatsApp</span>
+                    </a>
+                    
+                    <div class="phone-display">📞 +591 70664557</div>
+                    
+                    <div class="hours-box">
+                        <h4>🕐 Horarios de Atención</h4>
+                        <ul class="hours-list">
+                            <li>
+                                <span>Lunes - Viernes</span>
+                                <span>10:00 - 19:00</span>
+                            </li>
+                            <li>
+                                <span>Sábado</span>
+                                <span>09:30 - 12:30</span>
+                            </li>
+                            <li>
+                                <span>Domingo</span>
+                                <span>Cerrado</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div style="margin-top: 2rem;">
+                        <h4 style="margin-bottom: 1rem; color: var(--primary-color);">Síguenos en redes</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/consultorio.exceldent" target="_blank" title="Facebook">
+                                <span style="color: var(--white);">f</span>
+                            </a>
+                            <a href="https://wa.me/59170664557" target="_blank" title="WhatsApp">
+                                <span style="color: var(--white);">📱</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo *</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre completo">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono *</label>
+                            <input type="tel" id="telefono" name="telefono" required placeholder="Ej: 70664557">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="servicio">Servicio de Interés *</label>
+                            <select id="servicio" name="servicio" required>
+                                <option value="">Selecciona un servicio</option>
+                                <option value="consulta">Consulta General</option>
+                                <option value="limpieza">Limpieza Dental</option>
+                                <option value="blanqueamiento">Blanqueamiento</option>
+                                <option value="resinas">Resinas Estéticas</option>
+                                <option value="endodoncia">Endodoncia</option>
+                                <option value="ortodoncia">Ortodoncia</option>
+                                <option value="protesis">Prótesis Dentales</option>
+                                <option value="odontopediatria">Odontopediatría</option>
+                                <option value="urgencia">Urgencia Dental</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos sobre tu consulta o duda..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">
+                            Enviar Mensaje 📩
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h3>🦷 Clínica Dental Exceldent</h3>
+                <p>Tu salud bucal es nuestra prioridad. Ofrecemos atención odontológica integral con los más altos estándares de calidad en el centro de La Paz.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/consultorio.exceldent" target="_blank">f</a>
+                    <a href="https://wa.me/59170664557" target="_blank">📱</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Servicios</h3>
+                <p><a href="#servicios">Odontología General</a></p>
+                <p><a href="#servicios">Ortodoncia</a></p>
+                <p><a href="#servicios">Endodoncia</a></p>
+                <p><a href="#servicios">Blanqueamiento</a></p>
+                <p><a href="#servicios">Odontopediatría</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>📍 Loayza 250, La Paz, Bolivia</p>
+                <p>📞 +591 70664557</p>
+                <p>✉️ info@exceldent.bo</p>
+                <p>🕐 Lun-Vie: 10:00 - 19:00</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <p><a href="#inicio">Inicio</a></p>
+                <p><a href="#nosotros">Nosotros</a></p>
+                <p><a href="#servicios">Servicios</a></p>
+                <p><a href="#testimonios">Testimonios</a></p>
+                <p><a href="#contacto">Contacto</a></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Clínica Dental Exceldent. Todos los derechos reservados. | Diseñado con ❤️ para tu sonrisa</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/59170664557" class="floating-whatsapp" target="_blank" title="Chatea con nosotros">
+        💬
+    </a>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Gracias por contactarnos! Te responderemos pronto.');
+            this.reset();
+        });
+
+        // Mobile menu toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            navLinks.style.position = 'absolute';
+            navLinks.style.top = '100%';
+            navLinks.style.left = '0';
+            navLinks.style.right = '0';
+            navLinks.style.background = 'white';
+            navLinks.style.flexDirection = 'column';
+            navLinks.style.padding = '1rem';
+            navLinks.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            } else {
+                header.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
